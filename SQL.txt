@@ -34,3 +34,8 @@ INSERT INTO products VALUES
 // Inserting a specified fields only, that we want to fill out. (Price is missing, will be null)
 INSERT INTO products (id,name)
 VALUES (4,"House")
+
+// UPDATE the specific records, now the record with id 4
+UPDATE products
+SET price = 299100
+WHERE id = 4;
