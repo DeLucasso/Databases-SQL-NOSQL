@@ -1,0 +1,9 @@
+// This is an intro to SQL Databases
+// You can try to create your first customers db in https://sqliteonline.com/
+
+CREATE TABLE customers (
+   id int,
+   first_name varchar(255),
+   last_name varchar(255),
+   address varchar(255)
+  );
