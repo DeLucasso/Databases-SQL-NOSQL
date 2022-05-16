@@ -76,12 +76,12 @@ where id = 4;
 // The table with the foreign key is called the child table, and the table with the primary key is called the referenced or parent table.
 
 CREATE TABLE orders (
-  id INT NOT NULL
+  id INT NOT NULL,
   order_number INT,
-  customer_ID INT,
-  product_ID INT,
-  PRIMARY KEY (id)
-  FOREIGN key (customer_id) REFERENCES customers(id)
+  customer_id INT,
+  product_id INT,
+  PRIMARY KEY (id),
+  FOREIGN key (customer_id) REFERENCES customers(id),
   FOREIGN KEY (product_id) REFERENCES products(id)
   );
   
