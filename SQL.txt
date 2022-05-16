@@ -64,4 +64,7 @@ SELECT name, price FROM products;
 // SELECT a particular data and row from the table with ID 4
 SELECT name, price FROM products where id = 4;
 
-
+// DELETE - To delete a specific record in your db
+// !! Be careful when deleting records. If you omit the WHERE clause, ALL records will be DELETED!
+DELETE FROM products
+where id = 4;
