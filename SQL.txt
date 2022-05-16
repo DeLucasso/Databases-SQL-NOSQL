@@ -42,8 +42,16 @@ UPDATE products
 SET price = 299100
 WHERE id = 4;
 
+// UPDATE a db record with specific ID for instance. and Updating name , price
+UPDATE products
+SET name = "Bike", price = 299
+WHERE id = 4;
+
+
 // SELECT a particular data from the table
 SELECT name, price FROM products;
 
 // SELECT a particular data and row from the table with ID 4
 SELECT name, price FROM products where id = 4;
+
+
