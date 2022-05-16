@@ -1,4 +1,6 @@
 // This is an intro to SQL Databases
+// W3 SQL Documentation : https://www.w3schools.com/sql/default.asp
+
 // You can try to create your first customers db in https://sqliteonline.com/
 
 CREATE TABLE customers (
@@ -39,3 +41,9 @@ VALUES (4,"House")
 UPDATE products
 SET price = 299100
 WHERE id = 4;
+
+// SELECT a particular data from the table
+SELECT name, price FROM products;
+
+// SELECT a particular data and row from the table with ID 4
+SELECT name, price FROM products where id = 4;
