@@ -7,3 +7,25 @@ CREATE TABLE customers (
    last_name varchar(255),
    address varchar(255)
   );
+
+CREATE TABLE products (
+   id INT NOT NULL,
+   name STRING,
+   price MONEY,
+   PRIMARY KEY (ID)
+  );
+  
+// Now you can insert data to your table
+// One record at a time:
+INSERT INTO products
+VALUES(1, "Phone", 39.99)
+
+// Multiple records at once:
+INSERT INTO products VALUES (2, "Phone", 39.99);
+INSERT INTO products VALUES (3, "Car", 2359.99);
+
+// or
+INSERT INTO products
+VALUES (2, "Phone", 39.99);
+INSERT INTO products VALUES
+(3, "Car", 2359.99);
