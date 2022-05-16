@@ -38,15 +38,21 @@ INSERT INTO products (id,name)
 VALUES (4,"House")
 
 // UPDATE the specific records, now the record with id 4
+// !! Be careful when updating records. If you omit the WHERE clause, ALL records will be updated!
 UPDATE products
 SET price = 299100
 WHERE id = 4;
 
 // UPDATE a db record with specific ID for instance. and Updating name , price
+// !! Be careful when updating records. If you omit the WHERE clause, ALL records will be updated!
+
 UPDATE products
 SET name = "Bike", price = 299
 WHERE id = 4;
 
+// ALTER TABLE - Add a column to a db structure
+ALTER TABLE products
+add stock INT;
 
 // SELECT a particular data from the table
 SELECT name, price FROM products;
