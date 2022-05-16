@@ -29,3 +29,8 @@ INSERT INTO products
 VALUES (2, "Phone", 39.99);
 INSERT INTO products VALUES
 (3, "Car", 2359.99);
+
+
+// Inserting a specified fields only, that we want to fill out. (Price is missing, will be null)
+INSERT INTO products (id,name)
+VALUES (4,"House")
