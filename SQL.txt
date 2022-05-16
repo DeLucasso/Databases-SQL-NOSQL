@@ -68,3 +68,19 @@ SELECT name, price FROM products where id = 4;
 // !! Be careful when deleting records. If you omit the WHERE clause, ALL records will be DELETED!
 DELETE FROM products
 where id = 4;
+
+// How to establish RELATIONSHIPS between different db tables ( reference https://www.w3schools.com/sql/sql_foreignkey.asp )
+// SQL FOREIGN KEY Constraint
+// The FOREIGN KEY constraint is used to prevent actions that would destroy links between tables.
+// A FOREIGN KEY is a field (or collection of fields) in one table, that refers to the PRIMARY KEY in another table.
+// The table with the foreign key is called the child table, and the table with the primary key is called the referenced or parent table.
+
+CREATE TABLE orders (
+  id INT NOT NULL
+  order_number INT,
+  customer_ID INT,
+  product_ID INT,
+  PRIMARY KEY (id)
+  FOREIGN key (customer_id) REFERENCES customers(id)
+  FOREIGN KEY (product_id) REFERENCES products(id)
+  );
