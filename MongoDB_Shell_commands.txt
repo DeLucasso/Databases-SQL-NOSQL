@@ -32,3 +32,6 @@ db.products.find()
 
 // To find a specific document
 db.products.find({name: "Pen"})
+
+// To FIND all documents with a price greater than 1 for instance (query criteria)
+db.products.find({price: {$gt: 1}})
