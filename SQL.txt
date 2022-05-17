@@ -95,9 +95,9 @@ ADD FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
 SELECT orders.order_number, customers.first_name, customers.last_name, customers.address 
 FROM orders
 INNER JOIN customers ON orders.customer_id =  customers.id
+// Result: Order Number | Customer First Name | Customer Last Name | Customer Address
 
 SELECT orders.order_number, products.name, products.price, products.stock
 from orders
 INNER JOIN products on orders.product_id = products.id
-
-
+// Result: Order Number | Product Name | Product Price | Product Stock
