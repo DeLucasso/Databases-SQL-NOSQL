@@ -1,0 +1,13 @@
+// To enter a MongoDB SHELL, you can in new Terminal windows run it:
+mongo
+
+//To get a HELP of commands in the MongoDB shell:
+help
+
+// To GET A LIST of databases
+show dbs
+
+// To CREATE or USE a DB 'shopDB' for instance
+use shopDB
+// The DB is not in list, unless it has a data inside
+
