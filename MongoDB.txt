@@ -1,0 +1,29 @@
+// Local sever download : https://www.mongodb.com/try/download/community?tck=docs_server
+// extract files
+// move the extracted folder to /usd/local/mongodb
+sudo mv '/Users/LuCaS/Downloads/mongodb-macos-x86_64-5.0.8' /usr/local/mongodb
+
+// go to your home folder
+cd ~
+
+// check if you are at home directory
+pwd
+
+// create a bash profile
+touch /bash_profile
+
+// edit the .bash_profile with vim (hit "i" to go to insert mode
+vim .bash_profile
+
+// insert this into the file and press "ESC" to exit insert mode, press ":wq!" to save and exit vim editor
+export PATH=$PATH:/usr/local/mongodb/bin
+
+// make a data/db directory, but from OSX Catalina, it has to be somewhere else than /data/db!, like:
+mkdir -p/ usr/local/var/mongodb/data/db
+
+// set priviledges, check your username with bash> whoami
+sudo chown USERNAME /usr/local/var/mongodb/data/db
+
+// restart terminal
+// check mongodb version, if it's works
+mongo --version
