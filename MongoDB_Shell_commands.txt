@@ -11,3 +11,13 @@ show dbs
 use shopDB
 // The DB is not in list, unless it has a data inside
 
+// CRUD Documentation https://www.mongodb.com/docs/manual/crud/
+// MongoDB provides the following methods to insert documents into a collection:
+db.collection.insertOne() New in version 3.2
+db.collection.insertMany() New in version 3.2
+
+// To CREATE a collection:
+db.products.insertOne({_id: 1, name: "Pencil", price: 2.40})
+
+// To SHOW Collections:
+show collections
