@@ -91,4 +91,13 @@ CREATE TABLE orders (
 ALTER TABLE Orders
 ADD FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
 
+// INNER JOIN - To create a new database that selects records that have matching values in both tables. 
+SELECT orders.order_number, customers.first_name, customers.last_name, customers.address 
+FROM orders
+INNER JOIN customers ON orders.customer_id =  customers.id
+
+SELECT orders.order_number, products.name, products.price, products.stock
+from orders
+INNER JOIN products on orders.product_id = products.id
+
 
