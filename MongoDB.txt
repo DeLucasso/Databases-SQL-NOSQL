@@ -1,44 +1,30 @@
-// OSX installation https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/
+// Here's the WORKING solution to install MongoDB on your Mac! ( May 16, 2022 )
 
-// To run MongoDB (i.e. the mongod process) as a macOS service, run:
-brew services start mongodb-community@5.0
+1.) Install Homebrew in your terminal (it's all one line! so copy and paste this entirely!:
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-// To stop a mongod running as a macOS service, use the following command as needed:
-brew services stop mongodb-community@5.0
+2.) Find a MongoDB tap in homebrew in your terminal:
+brew tap mongodb/brew   
 
-//MongoDB CRUD Operations
-https://www.mongodb.com/docs/manual/crud/
+3.) Install MongoDB in your terminal:
+brew install mongodb-community
 
+4.) Create a db directory in your terminal: (enter your osx admin password)
+sudo mkdir -p /System/Volumes/Data/data/db
 
+5.) Set permissions in your terminal:
+sudo chown -R `id -un` /System/Volumes/Data/data/db
 
+6.) Launch your MongoDB in your terminal:
+sudo mongod --dbpath /System/Volumes/Data/data/db 
 
-// if it works, ignore these instructions ;) :
-// Local sever download : https://www.mongodb.com/try/download/community?tck=docs_server
-// extract files
-// move the extracted folder to /usd/local/mongodb
-sudo mv '/Users/LuCaS/Downloads/mongodb-macos-x86_64-5.0.8' /usr/local/mongodb
+Now it's running! and if you need a new terminal window to use, press Command + T to open a new one.
+You can stop the MongoDB server by pressing CMD+C
 
-// go to your home folder
-cd ~
+7.) Create an alias command in your terminal:
+alias mongod='sudo mongod --dbpath /System/Volumes/Data/data/db'
 
-// check if you are at home directory
-pwd
+8.) Now you have an alias so that you can run a MongoDB in your terminal just simple:
+mongod
 
-// create a bash profile
-touch /bash_profile
-
-// edit the .bash_profile with vim (hit "i" to go to insert mode
-vim .bash_profile
-
-// insert this into the file and press "ESC" to exit insert mode, press ":wq!" to save and exit vim editor
-export PATH=$PATH:/usr/local/mongodb/bin
-
-// make a data/db directory, but from OSX Catalina, it has to be somewhere else than /data/db!, like:
-mkdir -p/ usr/local/var/mongodb/data/db
-
-// set priviledges, check your username with bash> whoami
-sudo chown USERNAME /usr/local/var/mongodb/data/db
-
-// restart terminal
-// check mongodb version, if it's works
-mongo --version
+Voila, that's all folks! Hit me up a message, if you need help :) 
