@@ -27,4 +27,10 @@ alias mongod='sudo mongod --dbpath /System/Volumes/Data/data/db'
 8.) Now you have an alias so that you can run a MongoDB in your terminal just simple:
 mongod
 
+9.) To enter a MongoDB shell, you can in new Terminal windows run it:
+mongo
+
+10.) To get a help of commands in the MongoDB shell:
+help
+
 Voila, that's all folks! Hit me up a message, if you need help :) 
