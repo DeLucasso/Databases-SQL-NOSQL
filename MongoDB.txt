@@ -28,3 +28,6 @@ alias mongod='sudo mongod --dbpath /System/Volumes/Data/data/db'
 mongod
 
 Voila, that's all folks! Hit me up a message, if you need help :) 
+
+// To STOP a mongoDB server in another terminal window
+sudo pkill -f mongod
