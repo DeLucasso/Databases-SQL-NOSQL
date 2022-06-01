@@ -19,7 +19,7 @@ db.collection.insertMany() New in version 3.2
 // To CREATE a collection: (if the collection is not exist, it will be created with "db.products" automatically)
 db.products.insertOne({_id: 1, name: "Pencil", price: 2.40})
 
-// To create a another document inside a collection:
+// To create an another document inside a collection:
 db.products.insertOne({_id: 2, name: "Pen", price: 1.20})
 
 // To SHOW Collections:
@@ -27,7 +27,7 @@ show collections
 
 // FIND: https://www.mongodb.com/docs/manual/reference/method/db.collection.find/#mongodb-method-db.collection.find
 
-// To find all documents in collection
+// To FIND all documents in collection
 db.products.find()
 
 // To find a specific document
