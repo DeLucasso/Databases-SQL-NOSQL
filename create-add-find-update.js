@@ -35,3 +35,13 @@ Fruit.find(function (err, fruits) {
 fruits.forEach(fruit => console.log(fruit.name));
     // console.log(fruits);
   }
+  
+  
+// Let's update the document
+Fruit.updateOne({_id:"62a18e078c9aa71d5d6b87f1"}, {name:"JackFruit"}, function(err) {
+  if (err){
+  console.log(err);
+} else {
+  console.log("Sucessfully updated");
+}
+});
