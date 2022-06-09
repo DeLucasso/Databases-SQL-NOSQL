@@ -2,7 +2,7 @@
 
 const fruitSchema = new mongoose.Schema({
     
-  // Let's REQUIRE the name
+  // Let's REQUIRE the name, use Boolean true/false or 1/2 and the message is optional
    name: {
       type: String,
       required: [true,"The name is required"]
