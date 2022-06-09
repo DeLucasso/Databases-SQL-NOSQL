@@ -45,3 +45,12 @@ Fruit.updateOne({_id:"62a18e078c9aa71d5d6b87f1"}, {name:"JackFruit"}, function(e
   console.log("Sucessfully updated");
 }
 });
+  
+  //Let's delete a record
+Fruit.deleteOne({_id: "629705cdae1562eb1b7a8523"}, function(err) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("Deleted!");
+  }
+});
