@@ -3,8 +3,9 @@
 const fruitSchema = new mongoose.Schema({
     
   // Let's REQUIRE the name
-    name: {
-      type: String, required: true,
+   name: {
+      type: String,
+      required: [true,"The name is required"]
     },
   
     // Let's set MIN and MAX for the number  
