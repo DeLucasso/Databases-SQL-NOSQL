@@ -54,3 +54,12 @@ Fruit.deleteOne({_id: "629705cdae1562eb1b7a8523"}, function(err) {
     console.log("Deleted!");
   }
 });
+  
+  //Let's delete MANY record
+Fruit.deleteMany({name:"Broskev"}, function(err) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("Deleted!");
+  }
+});
