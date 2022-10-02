@@ -11,6 +11,14 @@
     review: String
   });
 
+// --- CREATE a DB item in document -------------
+// const <constantName> = new <ModelName> ({
+// <fieldName> : <fieldData>,
+// ...
+// <constName>.save();
+// ----------------------------------------------
+
+
 // Creating model + collection. The Mongo will Always drop the Capital letter in "Fruit"
 // and makes it a plural // "fruits"
 const Fruit = mongoose.model('Fruit', fruitSchema);
